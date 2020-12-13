@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2020-12-13T15:07:00+09:00</updated><entry><title>Google Analytics 関連記事まとめ</title><link href="https://code440.github.io/google-analytics-guan-lian-ji-shi-matome.html" rel="alternate"></link><published>2020-12-13T15:07:00+09:00</published><updated>2020-12-13T15:07:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/google-analytics-guan-lian-ji-shi-matome.html</id><content type="html">&lt;p&gt;&lt;a href="https://www.iscle.com/web-it/g-drive/g-analytics-privacy-policy.html"&gt;【コピペ可】Googleアナリティクスの設置で必須なプライバシーポリシーの書き方, 2020.02.03&lt;/a&gt;&lt;/p&gt;</content><category term="survey, Google Analytics"></category></entry><entry><title>静的サイトジェネレーター Pelican の日本語記事まとめ</title><link href="https://code440.github.io/jing-de-saitozienereta-pelican-nori-ben-yu-ji-shi-matome.html" rel="alternate"></link><published>2020-12-13T00:15:00+09:00</published><updated>2020-12-13T00:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/jing-de-saitozienereta-pelican-nori-ben-yu-ji-shi-matome.html</id><content type="html">&lt;h2&gt;インストールからGithubpagesへのデプロイ&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2020-12-13T15:07:00+09:00</updated><entry><title>Google Analytics 関連記事まとめ</title><link href="https://code440.github.io/google-analytics-guan-lian-ji-shi-matome.html" rel="alternate"></link><published>2020-12-13T15:07:00+09:00</published><updated>2020-12-13T15:07:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/google-analytics-guan-lian-ji-shi-matome.html</id><content type="html">&lt;!-- Modified: --&gt;
+&lt;p&gt;Category: survey
+Tags: Google Analytics
+Slug: google_analytics_20201213
+Summary: Googleアナリティクスの導入に必要な情報について紹介するページをまとめた。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.iscle.com/web-it/g-drive/g-analytics-privacy-policy.html"&gt;【コピペ可】Googleアナリティクスの設置で必須なプライバシーポリシーの書き方, 2020.02.03&lt;/a&gt;&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>静的サイトジェネレーター Pelican の日本語記事まとめ</title><link href="https://code440.github.io/pelican_survey.html" rel="alternate"></link><published>2020-12-13T00:15:00+09:00</published><updated>2020-12-13T00:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/pelican_survey.html</id><summary type="html">&lt;p&gt;python製の静的サイトジェネレーターであるPelicanについて、その導入について紹介する記事についてまとめた。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;インストールからGithubpagesへのデプロイ&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://mizunashi-mana.github.io/blog/posts/2019/03/start-blog/"&gt;ブログ始めました, 2019.3.31&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://daikishimada.github.io/pelican-start.html"&gt;Pelican + Github Pages でブログを作った話, 2016.05&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;インストールからテーマ変更&lt;/h2&gt;
@@ -8,12 +13,12 @@
 &lt;p&gt;&lt;a href="https://www.sairablog.com/article/python-pelican-blog-theme-howto.html"&gt;Pelican ブログにテーマを導入する方法, 2019.03.14&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;インストールからコンテツ作成&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://ytyaru.hatenablog.com/entry/2018/01/16/000000"&gt;pelican-quickstartでブログのひな形をつくってみる, 2018.01.16&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;参考&lt;/h1&gt;
-&lt;h2&gt;公式ドキュメント&lt;/h2&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;h3&gt;公式ドキュメント&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://www.pelicanthemes.com/"&gt;Pelican Themes&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;テーマ&lt;/h2&gt;
-&lt;h3&gt;Flex&lt;/h3&gt;
+&lt;h3&gt;テーマ&lt;/h3&gt;
+&lt;h4&gt;Flex&lt;/h4&gt;
 &lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/tree/b3bd59002a3e85803332c35702d90e1e19ef39b6"&gt;Flex&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/wiki"&gt;Flex wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example"&gt;Flex Configuration example&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/blob/bbf47fe35473774d8a41478523cf4d3b21268e35/docs/content/articles/flex-pelican-theme-2-1.md"&gt;Flex google adsense&lt;/a&gt;&lt;/p&gt;</content><category term="survey, pelican, 静的サイトジェネレーター"></category></entry><entry><title>First Page</title><link href="https://code440.github.io/first-page.html" rel="alternate"></link><published>2020-12-06T23:42:00+09:00</published><updated>2020-12-06T23:42:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-06:/first-page.html</id><content type="html">&lt;p&gt;First page&lt;/p&gt;</content><category term="blog"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/blob/bbf47fe35473774d8a41478523cf4d3b21268e35/docs/content/articles/flex-pelican-theme-2-1.md"&gt;Flex google adsense&lt;/a&gt;&lt;/p&gt;</content><category term="survey"></category><category term="pelican"></category><category term="静的サイトジェネレーター"></category></entry><entry><title>First Page</title><link href="https://code440.github.io/first-page.html" rel="alternate"></link><published>2020-12-06T23:42:00+09:00</published><updated>2020-12-06T23:42:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-06:/first-page.html</id><content type="html">&lt;p&gt;First page&lt;/p&gt;</content><category term="blog"></category></entry></feed>
