@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2020-12-31T17:45:00+09:00</updated><entry><title>積層3Dプリンター性能比較表 10万円以下</title><link href="https://code440.github.io/3d_printer_under100000yen_20201231.html" rel="alternate"></link><published>2020-12-31T17:45:00+09:00</published><updated>2020-12-31T17:45:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-31:/3d_printer_under100000yen_20201231.html</id><summary type="html">&lt;p&gt;10万円以下の積層3Dプリンターについてその性能を表でまとめた。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;注意&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - 3DPrinting</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/3dprinting.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2020-12-31T17:45:00+09:00</updated><entry><title>積層3Dプリンター性能比較表 10万円以下</title><link href="https://code440.github.io/3d_printer_under100000yen_20201231.html" rel="alternate"></link><published>2020-12-31T17:45:00+09:00</published><updated>2020-12-31T17:45:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-31:/3d_printer_under100000yen_20201231.html</id><summary type="html">&lt;p&gt;10万円以下の積層3Dプリンターについてその性能を表でまとめた。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;注意&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;個人で作成したため間違いがあるかもしれません。購入などの検討の際には必ず公式サイト等をご覧ください。&lt;/li&gt;
 &lt;li&gt;格安系の3Dプリンターについてはそのうち追加します。&lt;/li&gt;
@@ -234,47 +234,4 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;!--|ダヴィンチ Jr. 1.0 Pro       |XYZprinting| ¥69,800|      150|       150|      -|      150|            0.02|             0.4|             160|PLA/PETG/ToughPLA/抗菌性PLA/Wood PLA/*メタリックPLA/*カーボンPLA (*専用ノズル要)|420x430x380|12|[xyzprinting](https://www.xyzprinting.com/ja-JP/product/da-vinci-jr-1-0-pro)|[アマゾン]()|--&gt;</content><category term="3DPrinting"></category><category term="3DPrinter"></category></entry><entry><title>Google Adsense 関連記事まとめ</title><link href="https://code440.github.io/google_adsense_20201213.html" rel="alternate"></link><published>2020-12-13T20:41:00+09:00</published><updated>2020-12-13T20:41:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/google_adsense_20201213.html</id><summary type="html">&lt;p&gt;Google アドセンスの導入に必要な情報に関連するページをまとめた。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Google Adsense公式情報&lt;/h2&gt;
-&lt;h3&gt;ポリシー等&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/adsense/answer/48182"&gt;AdSense プログラム ポリシー&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/adsense/answer/9335564"&gt;Google サイト運営者 / パブリッシャー向けポリシー&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/adsense/answer/9335567"&gt;Google サイト運営者 / パブリッシャー向け制限コンテンツ&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/webtools/answer/7347327"&gt;不正なコンテンツ&lt;/a&gt;  &lt;/p&gt;
-&lt;h3&gt;サイトの質に関すること&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://webmaster-ja.googleblog.com/"&gt;Google ウェブマスター向け公式ブログ&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/adsense/answer/10015918"&gt;サイトで独自性のあるコンテンツと優れたユーザー エクスペリエンスを提供する&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://adsense-ja.googleblog.com/2012/04/blog-post.html?sourceid=aso&amp;amp;subid=ww-jp-et-asblog_2012-09-27&amp;amp;medium=link"&gt;プログラムポリシー: 質の高いサイトを作成するためのヒント, 2012.04.25&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://adsense-ja.googleblog.com/2012/09/2.html"&gt;プログラム ポリシー: 質の高いサイトを構築するためのヒント パート 2, 2012.09.27&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines?visit_id=637434455967637588-1106322051&amp;amp;rd=1"&gt;ウェブマスター向けガイドライン&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/adsense/answer/1348737"&gt;ウェブマスター向けの品質に関するガイドライン&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://webmaster-ja.googleblog.com/2012/09/more-guidance-on-building-high-quality.html?sourceid=aso&amp;amp;subid=ww-jp-et-asblog_2012-09-27&amp;amp;medium=link"&gt;良質なサイトを作るためのアドバイス&lt;/a&gt;  &lt;/p&gt;
-&lt;h2&gt;関連情報&lt;/h2&gt;
-&lt;h3&gt;Google広告&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/google-ads/answer/2404197"&gt;ランディング ページの利便性を把握する&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/google-ads/answer/2549057"&gt;効果的なモバイルサイトを作成する&lt;/a&gt;  &lt;/p&gt;</content><category term="survey"></category><category term="Google Adsense"></category></entry><entry><title>Google Analytics 関連記事まとめ</title><link href="https://code440.github.io/google_analytics_20201213.html" rel="alternate"></link><published>2020-12-13T15:07:00+09:00</published><updated>2020-12-13T15:07:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/google_analytics_20201213.html</id><summary type="html">&lt;p&gt;Googleアナリティクスの導入に必要な情報に関連するページをまとめた。&lt;/p&gt;</summary><content type="html">&lt;!-- Modified: --&gt;
-
-&lt;h2&gt;Google Analytics4 公式&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/analytics/answer/9306384?hl=ja&amp;amp;ref_topic=9303319"&gt;アナリティクスのスタートガイド&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/analytics/answer/9744165"&gt;Google アナリティクス 4 プロパティへのアップグレード&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;プライバシーポリシー&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.iscle.com/web-it/g-drive/g-analytics-privacy-policy.html"&gt;【コピペ可】Googleアナリティクスの設置で必須なプライバシーポリシーの書き方, 2020.02.03&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Pelicanへの導入&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://mizunashi-mana.github.io/blog/posts/2019/04/add-google-analytics/"&gt;Google Analytics の導入, 2019.04.08&lt;/a&gt;&lt;/p&gt;</content><category term="survey"></category><category term="Google Analytics"></category></entry><entry><title>静的サイトジェネレーター Pelican の日本語記事まとめ</title><link href="https://code440.github.io/pelican_survey.html" rel="alternate"></link><published>2020-12-13T00:15:00+09:00</published><updated>2020-12-13T00:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2020-12-13:/pelican_survey.html</id><summary type="html">&lt;p&gt;python製の静的サイトジェネレーターであるPelicanについて、その導入について紹介する記事についてまとめた。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;インストールからGithubpagesへのデプロイ&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://mizunashi-mana.github.io/blog/posts/2019/03/start-blog/"&gt;ブログ始めました, 2019.3.31&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://daikishimada.github.io/pelican-start.html"&gt;Pelican + Github Pages でブログを作った話, 2016.05&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;インストールからテーマ変更&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://kapiecii.hatenablog.com/entry/2019/12/28/161500"&gt;Python製の静的サイトジェネレーター「Pelican」を試してみた, 2019.12.28&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;テーマ変更&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.ainoniwa.net/pelican/2020/0830a.html"&gt;Pelicanのテーマ周りの見直し, 2020.08.30&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.sairablog.com/article/python-pelican-blog-theme-howto.html"&gt;Pelican ブログにテーマを導入する方法, 2019.03.14&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;インストールからコンテツ作成&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://ytyaru.hatenablog.com/entry/2018/01/16/000000"&gt;pelican-quickstartでブログのひな形をつくってみる, 2018.01.16&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-&lt;h3&gt;公式ドキュメント&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.pelicanthemes.com/"&gt;Pelican Themes&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;テーマ&lt;/h3&gt;
-&lt;h4&gt;Flex&lt;/h4&gt;
-&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/tree/b3bd59002a3e85803332c35702d90e1e19ef39b6"&gt;Flex&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/wiki"&gt;Flex wiki&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example"&gt;Flex Configuration example&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/blob/bbf47fe35473774d8a41478523cf4d3b21268e35/docs/content/articles/flex-pelican-theme-2-1.md"&gt;Flex google adsense&lt;/a&gt;&lt;/p&gt;</content><category term="survey"></category><category term="pelican"></category><category term="静的サイトジェネレーター"></category></entry></feed>
+&lt;!--|ダヴィンチ Jr. 1.0 Pro       |XYZprinting| ¥69,800|      150|       150|      -|      150|            0.02|             0.4|             160|PLA/PETG/ToughPLA/抗菌性PLA/Wood PLA/*メタリックPLA/*カーボンPLA (*専用ノズル要)|420x430x380|12|[xyzprinting](https://www.xyzprinting.com/ja-JP/product/da-vinci-jr-1-0-pro)|[アマゾン]()|--&gt;</content><category term="3DPrinting"></category><category term="3DPrinter"></category></entry></feed>
