@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://code440.github.io/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://code440.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tech Note 440s Atom">
+
+
+    <link rel="shortcut icon" href="/images/code-440.png" type="image/x-icon">
+    <link rel="icon" href="/images/code-440.png" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#440">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#440">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#440">
+
+<meta name="author" content="code-440" />
+<meta name="description" content="Blenderの入門としてそのチュートリアルである「Cube Owl」について、第1段としてオブジェクトの配置方法についてまとめた。" />
+<meta name="keywords" content="Blender, modeling">
+
+
+<meta property="og:site_name" content="Tech Note 440s"/>
+<meta property="og:title" content="Blenderチュートリアル「Cube Owl」その1"/>
+<meta property="og:description" content="Blenderの入門としてそのチュートリアルである「Cube Owl」について、第1段としてオブジェクトの配置方法についてまとめた。"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://code440.github.io/blender-tutrial-cube-owl-1.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-01-02 19:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://code440.github.io/author/code-440.html">
+<meta property="article:section" content="Blender"/>
+<meta property="article:tag" content="Blender"/>
+<meta property="article:tag" content="modeling"/>
+<meta property="og:image" content="https://code440.github.io/images/blender_tutrial_cube_owl_1/0_cover.png">
+
+  <title>Tech Note 440s &ndash; Blenderチュートリアル「Cube Owl」その1</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-3079184443691298",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://code440.github.io">
+        <img src="/images/code-440.png" alt="code-440" title="code-440">
+      </a>
+
+      <h1>
+        <a href="https://code440.github.io">code-440</a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://code440.github.io/pages/privacy_policy.html#privacy_policy">
+                  プライバシーポリシー
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="" ></a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-You can add links in your config file" href="#" target="_blank">
+              <i class="fab fa-You can add links in your config file"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-Another social link" href="#" target="_blank">
+              <i class="fab fa-Another social link"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle ads-aside"
+           data-ad-client="ca-pub-3079184443691298"
+           data-ad-slot="6118075817"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://code440.github.io">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://code440.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="blender-tutrial-cube-owl-1">Blenderチュートリアル「Cube Owl」その1</h1>
+    <p>
+      Posted on Sat 02 January 2021 in <a href="https://code440.github.io/category/blender.html">Blender</a>
+
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-3079184443691298"
+         data-ad-slot="6118075817"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <p><img alt="Cover" src="../images/blender_tutrial_cube_owl_1/0_cover.png"></p>
+<h2>はじめに　Blenderのチュートリアルについて</h2>
+<p>Blenderの公式ページビギナー向けのチュートリアルとして「Cube Owl」の作り方が公開されている。<br>
+本記事ではBlender初心者の筆者がこの「Cube Owl」をチュートリアルに沿って作っていく。<br>
+なお公式の動画は以下の通りであるが、コメントにもある通りところどころ操作方法が飛ばされている。  </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4xLdisAvjx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2>「Cube Owl」の作成</h2>
+<h3>1. 立方体の追加</h3>
+<p>最初から置かれている立方体を[左クリック]し、[G]キーを押し、マウス操作で移動させる。<br>
+<img alt="1_1" src="../images/blender_tutrial_cube_owl_1/1_1.png"></p>
+<p>[Shift]+A  でメニューを出し、[メッシュ]-[立方体]を選択し追加。<br>
+<img alt="1_2" src="../images/blender_tutrial_cube_owl_1/1_2.png"></p>
+<h3>2. 立方体の整形</h3>
+<p>追加した立方体を左クリックで選択し[S]キーを押し、マウスドラッグで大きさを調整。クリックで確定する。<br>
+[S]を押した後、[ホイール]クリックで大きさの変化する方向を変えられる。<br>
+[ホイール]クリックで変化する軸を切り替えながら調整する。  </p>
+<p><img alt="2_1" src="../images/blender_tutrial_cube_owl_1/2_1.png"></p>
+<p>なお、右の[トランスフォーム]から大きさや位置を変えることができる。  </p>
+<h3>3. オブジェクトの編集</h3>
+<p>編集したいオブジェクトを左クリックで選択し、左上の[オブジェクトモード]になっているところを編集モードに切り替える。<br>
+<img alt="3_1" src="../images/blender_tutrial_cube_owl_1/3_1.png"></p>
+<p>編集オブジェクトを左クリックし[A]キーですべての頂点・辺を選択。  </p>
+<p>編集モードで右クリックをし[細分化]を選択。<br>
+<img alt="3_2" src="../images/blender_tutrial_cube_owl_1/3_2.png"></p>
+<p>もう一度[細分化]で1辺を4等分し、4x4のグリッドに見えるようにする。<br>
+<img alt="3_3" src="../images/blender_tutrial_cube_owl_1/3_3.png"></p>
+<p>グリッド上の2点を選択し、[S]キー押し、[X](またはYやZ)を押して動く方向を固定し[G]を押してから動かす。  </p>
+<p><img alt="3_4" src="../images/blender_tutrial_cube_owl_1/3_4.png"></p>
+<p><img alt="3_5" src="../images/blender_tutrial_cube_owl_1/3_5.png"></p>
+<p>また、中心の点について[S]キー、[Z]を押して方向を固定し、[G]を押して動かす。  </p>
+<p><img alt="3_6" src="../images/blender_tutrial_cube_owl_1/3_6.png"></p>
+<p>この作業を各点で行い、ハート型に整形する。  </p>
+<p><img alt="3_7" src="../images/blender_tutrial_cube_owl_1/3_7.png"></p>
+<p>整形が完了したら[オブジェクトモード]に戻す。  </p>
+<h2>4. 円柱の追加</h2>
+<p>チュートリアルの流れでは翼や尻尾を追加するが、ハートを作った時と要領は同じなので省略し脚を作る。  </p>
+<p>[Shift]+A  でメニューを出し、[メッシュ]-[円柱]を選択。<br>
+出てきた円柱を[G]キーを押して移動させる。
+<img alt="4_1" src="../images/blender_tutrial_cube_owl_1/4_1.png"></p>
+<p>[S]キーと[Z]キーを押すことを繰り返しながら大きさを調整する。<br>
+<img alt="4_2" src="../images/blender_tutrial_cube_owl_1/4_2.png"></p>
+<p>大きさの調整が終わったら[R]キーを押し回転させる。<br>
+<img alt="4_3" src="../images/blender_tutrial_cube_owl_1/4_3.png"></p>
+<p>回転させた円柱の位置を上が立方体と重なるように位置を調整する。<br>
+<img alt="4_4" src="../images/blender_tutrial_cube_owl_1/4_4.png"></p>
+<h2>5. 円柱の複製</h2>
+<p>あらかじめ[G]キーと[Z]や[X]キーを使ってオブジェクト全体の位置を調整しておく。<br>
+<img alt="5_1" src="../images/blender_tutrial_cube_owl_1/5_1.png"></p>
+<p>円柱を選択して[Shift]+[D]で複製する。<br>
+<img alt="5_2" src="../images/blender_tutrial_cube_owl_1/5_2.png"></p>
+<p>[G]と[R]キーを使って位置と角度を調整する。  </p>
+<p>複製した円柱を選択した状態で編集モードにし、円柱をドラッグした状態で[Shift]+[S]キーから[カーソル→選択物]とする。<br>
+<img alt="5_3" src="../images/blender_tutrial_cube_owl_1/5_3.png"></p>
+<p><img alt="5_4" src="../images/blender_tutrial_cube_owl_1/5_4.png"></p>
+<p>[オブジェクトモード]にして[Shift]+[A]キーから立方体を追加。
+また、[S]キーなどで大きさを調整。<br>
+<img alt="5_5" src="../images/blender_tutrial_cube_owl_1/5_5.png"></p>
+<h2>6. 脚のミラー複製</h2>
+<p>これまでにできた脚を選択肢[R]キーと[Z]キーで角度を調整し外側を向くようにしておく。  </p>
+<p>右側のスパナのマークをクリックし、[モディファイアーを追加]から[ミラー]を選択。<br>
+<img alt="6_1" src="../images/blender_tutrial_cube_owl_1/6_1.png">
+<img alt="6_2" src="../images/blender_tutrial_cube_owl_1/6_2.png"></p>
+<p>右側の[オブジェクトを選択]のスポイトマークをクリックし、本体の立方体をクリック。<br>
+<img alt="6_3" src="../images/blender_tutrial_cube_owl_1/6_3.png"></p>
+<p><img alt="6_4" src="../images/blender_tutrial_cube_owl_1/6_4.png"></p>
+<p>これを他の脚オブジェクトで繰り返して両脚が完成。<br>
+<img alt="6_5" src="../images/blender_tutrial_cube_owl_1/0_cover.png"></p>
+<p>その2へ続く・・・</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://code440.github.io/tag/blender.html">Blender</a>
+      <a href="https://code440.github.io/tag/modeling.html">modeling</a>
+    </p>
+  </div>
+
+
+  <div class="neighbors">
+    <a class="btn float-left" href="https://code440.github.io/3d_printer_under100000yen_20201231.html" title="10万円以下の積層3Dプリンター性能比較表">
+      <i class="fa fa-angle-left"></i> Previous Post
+    </a>
+  </div>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-3079184443691298"
+         data-ad-slot="6118075817"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</article>
+
+    <footer>
+<p>&copy; 2021 code-440</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Tech Note 440s ",
+  "url" : "https://code440.github.io",
+  "image": "/images/code-440.png",
+  "description": "pelican, python"
+}
+</script>
+
+
+</body>
+</html>
