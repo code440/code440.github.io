@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-01-11T19:15:00+09:00</updated><entry><title>Blenderチュートリアル「The popular donut」その1 基本操作</title><link href="https://code440.github.io/blender-beginner-tutrial-1.html" rel="alternate"></link><published>2021-01-11T19:15:00+09:00</published><updated>2021-01-11T19:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-11:/blender-beginner-tutrial-1.html</id><summary type="html">&lt;p&gt;Blenderの入門としてYouTubeで公開されているドーナッツの作例に取り組む。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_beginner_tutrial_1/0_cover.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-01-12T23:57:00+09:00</updated><entry><title>Blenderチュートリアル「The popular donut」その2 モデリング</title><link href="https://code440.github.io/blender-beginner-tutrial-2.html" rel="alternate"></link><published>2021-01-12T23:57:00+09:00</published><updated>2021-01-12T23:57:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-12:/blender-beginner-tutrial-2.html</id><summary type="html">&lt;p&gt;Blenderの入門としてYouTubeで公開されているドーナッツの作例に取り組む。その2&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_beginner_tutrial_2/0_cover.png"&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに　Blenderのチュートリアルについて&lt;/h2&gt;
+&lt;p&gt;今回はYouTubeにてBlenderのチュートリアルとして公開されている動画に沿ってモデリングを行う。
+とても丁寧な動画のためそのまま実行するだけとなりそうだ。
+前回は&lt;a href="https://code440.github.io/blender-beginner-tutrial-1.html#blender-beginner-tutrial-1"&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/RaT-uG5wgUw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;トーラスの追加&lt;/h2&gt;
+&lt;p&gt;最初から置いてある立方体を[Delete]する。
+[Shift]+[A]から[メッシュ]-[トーラス]を選択。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1_1" src="../images/blender_beginner_tutrial_2/1_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;左下のトーラスを追加をクリックし大半径と小半径を調節。
+&lt;img alt="1_2" src="../images/blender_beginner_tutrial_2/1_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;なお、右の[シーンプロパティ]から単位を変更できる。
+ここでは大半径を0.05m、小半径を0.026mとする。
+また、大セグメント数を28、小セグメント数を12とする。
+後ほど細分化するのでここでは編集しやすいセグメント数とする。
+&lt;img alt="1_3" src="../images/blender_beginner_tutrial_2/1_3.png"&gt;&lt;/p&gt;
+&lt;h2&gt;形状の加工&lt;/h2&gt;
+&lt;p&gt;このままではドーナツにしては綺麗すぎるため、形状を歪ませていく。
+左上の[編集モード]を選択する。
+[Tab]キーを押すことで[オブジェクトモード]と[編集モード]を切り替えることができる。&lt;br&gt;
+&lt;img alt="1_4" src="../images/blender_beginner_tutrial_2/1_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;[プロポーショナル編集]を選択。[O]キーでもできる。&lt;br&gt;
+&lt;img alt="1_5" src="../images/blender_beginner_tutrial_2/1_5.png"&gt;&lt;/p&gt;
+&lt;p&gt;次に頂点を選択した状態で[G]キーを押し、上に移動する。&lt;br&gt;
+その状態でホイールを回転させると頂点の位置をそのままに周辺の変化する範囲を調整できる。&lt;br&gt;
+&lt;img alt="1_6" src="../images/blender_beginner_tutrial_2/1_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;これらのキーを使ってドーナツらしく見えるように歪ませていく。&lt;/p&gt;
+&lt;p&gt;歪ませる作業が終了したら、オブジェクトを選択した状態で[左クリック]で[オブジェクトコンテクストメニュー]を表示し、
+[スムーズシェード]を選択する。&lt;br&gt;
+なお、[フラットシェード]で元の表示となる。
+&lt;img alt="1_7" src="../images/blender_beginner_tutrial_2/1_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1_8" src="../images/blender_beginner_tutrial_2/1_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;[モディファイアを追加]から[サブディビジョンサーフェス]を選択で滑らかな形状となる。
+&lt;img alt="1_9" src="../images/blender_beginner_tutrial_2/1_9.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1_10" src="../images/blender_beginner_tutrial_2/0_cover.png"&gt;&lt;/p&gt;
+&lt;p&gt;以上でその2は終了。&lt;br&gt;
+この後は装飾したりするようだが、例によって3Dプリンタでの利用を目指したモデリングが目的のため割愛する。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/479806128X/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=479806128X&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=a1205e30dc36a607b626b282e41476a7"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=479806128X&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;img src="//ir-jp.amazon-adsystem.com/e/ir?t=code440-22&amp;l=am2&amp;o=9&amp;a=479806128X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;</content><category term="Blender"></category><category term="Blender"></category><category term="modeling"></category></entry><entry><title>Blenderチュートリアル「The popular donut」その1 基本操作</title><link href="https://code440.github.io/blender-beginner-tutrial-1.html" rel="alternate"></link><published>2021-01-11T19:15:00+09:00</published><updated>2021-01-11T19:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-11:/blender-beginner-tutrial-1.html</id><summary type="html">&lt;p&gt;Blenderの入門としてYouTubeで公開されているドーナッツの作例に取り組む。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_beginner_tutrial_1/0_cover.png"&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに　Blenderのチュートリアルについて&lt;/h2&gt;
 &lt;p&gt;今回はYouTubeにてBlenderのチュートリアルとして公開されている動画に沿ってモデリングを行う。
 とても丁寧な動画のためそのまま実行するだけとなりそうだ。&lt;/p&gt;
