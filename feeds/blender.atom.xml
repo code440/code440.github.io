@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Blender</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/blender.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-01-12T23:57:00+09:00</updated><entry><title>Blenderチュートリアル「The popular donut」その2 モデリング</title><link href="https://code440.github.io/blender-beginner-tutrial-2.html" rel="alternate"></link><published>2021-01-12T23:57:00+09:00</published><updated>2021-01-12T23:57:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-12:/blender-beginner-tutrial-2.html</id><summary type="html">&lt;p&gt;Blenderの入門としてYouTubeで公開されているドーナッツの作例に取り組む。その2&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_beginner_tutrial_2/0_cover.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Blender</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/blender.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-01-24T18:05:00+09:00</updated><entry><title>Blenderで某県のマスコットキャラクターをモデリングする 準備編</title><link href="https://code440.github.io/modeling-chiiba-1.html" rel="alternate"></link><published>2021-01-24T18:05:00+09:00</published><updated>2021-01-24T18:05:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-24:/modeling-chiiba-1.html</id><summary type="html">&lt;p&gt;Blenderの練習として某県のマスコットキャラクターのモデリングに取り組む。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/modeling_chiiba_1/0_cover.png"&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに　Blenderによるキャラクターのモデリングについて&lt;/h2&gt;
+&lt;p&gt;Blenderを使ってゆるきゃらなどのマスコットキャラクターをモデリングしたい。
+今回はYouTubeにてBlenderの公式チャンネルにて公開されている動画を参考にモデリングを行う。&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/cDli6QjNna0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;グリッドの調整&lt;/h2&gt;
+&lt;p&gt;今回は３Dプリンタでの利用を想定して、最終的なサイズ感を10cm程度に収めようと思う。&lt;br&gt;
+そこで、Blenderのグリッドの表示単位を変更する&lt;br&gt;
+ビューポートオーバーレイをクリックする。&lt;br&gt;
+ここにあるスケールのデフォルトは1となっており、1m単位でグリッドが引かれている。
+ここではｃｍ単位とするため0.01とする。&lt;br&gt;
+&lt;img alt="1_1" src="../images/modeling_chiiba_1/1_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;試しにデフォルトボックスのサイズを0.1m（10cm）にしてみるとグリッドが対応していることがわかる。&lt;br&gt;
+&lt;img alt="1_2" src="../images/modeling_chiiba_1/1_2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;キャラクターの下絵の取り込み&lt;/h2&gt;
+&lt;h3&gt;正面下絵の読み込み&lt;/h3&gt;
+&lt;p&gt;まずは形状をモデリングするさいに参考となる下絵をBlenderで読み込む。&lt;br&gt;
+あらかじめ用意した下絵の画像ファイルをドラッグアンドドロップで取り込む。&lt;br&gt;
+&lt;img alt="1_3" src="../images/modeling_chiiba_1/1_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;画像が大きすぎるので調整する。&lt;br&gt;
+右下にある[オブジェクトデータプロパティ]をクリック。&lt;br&gt;
+&lt;img alt="1_4" src="../images/modeling_chiiba_1/1_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;画像の端を[左クリック]しながらドラッグで大きさを調整する。&lt;br&gt;
+&lt;img alt="1_5" src="../images/modeling_chiiba_1/1_5.png"&gt;&lt;/p&gt;
+&lt;p&gt;画像の中心付近を[左クリック]しながらドラッグで位置を調整する。&lt;br&gt;
+&lt;img alt="1_6" src="../images/modeling_chiiba_1/1_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;デフォルトキューブは選択した状態で[H]キーを押すことで非表示とすることができる。&lt;br&gt;
+&lt;img alt="1_7" src="../images/modeling_chiiba_1/1_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;位置と大きさを調整し、足底が中心の高さとなるようにする。&lt;br&gt;
+&lt;img alt="1_8" src="../images/modeling_chiiba_1/1_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;シーンコレクションから下絵の名前をわかりやすいものに変えておく。ここではfrontとした。&lt;br&gt;
+&lt;img alt="1_8" src="../images/modeling_chiiba_1/1_8.png"&gt;&lt;/p&gt;
+&lt;h3&gt;側面下絵の設定&lt;/h3&gt;
+&lt;p&gt;先ほどの下絵を選択している状態で[Shift]+[D]キーで下絵をコピーする。&lt;br&gt;
+とりあえず[Esc]キーを押して置いておく。  &lt;/p&gt;
+&lt;p&gt;3Dカーソルに合わせて回転させるため、
+3Dカーソルの位置が原点からずれている場合は[Shift]+[S]キーで原点に戻しておく。
+&lt;img alt="2_1" src="../images/modeling_chiiba_1/2_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;[.]キーで回転中心を３Dカーソルにする。&lt;br&gt;
+&lt;img alt="2_2" src="../images/modeling_chiiba_1/2_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;視点を変えながら側面の下絵を選択している状態で[R]キーを押し、90度回転させる。
+&lt;img alt="2_3" src="../images/modeling_chiiba_1/2_3.png"&gt;
+&lt;img alt="2_4" src="../images/modeling_chiiba_1/2_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;某県のキャラクターは地図に忠実なため傾いているので回転させてみた。&lt;br&gt;
+&lt;img alt="2_5" src="../images/modeling_chiiba_1/2_5.png"&gt;&lt;/p&gt;
+&lt;p&gt;以上で下準備は終了。次回はモデリングを行っていく。  &lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/479806128X/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=479806128X&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=a1205e30dc36a607b626b282e41476a7"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=479806128X&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;img src="//ir-jp.amazon-adsystem.com/e/ir?t=code440-22&amp;l=am2&amp;o=9&amp;a=479806128X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;</content><category term="Blender"></category><category term="Blender"></category><category term="modeling"></category></entry><entry><title>Blenderチュートリアル「The popular donut」その2 モデリング</title><link href="https://code440.github.io/blender-beginner-tutrial-2.html" rel="alternate"></link><published>2021-01-12T23:57:00+09:00</published><updated>2021-01-12T23:57:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-01-12:/blender-beginner-tutrial-2.html</id><summary type="html">&lt;p&gt;Blenderの入門としてYouTubeで公開されているドーナッツの作例に取り組む。その2&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_beginner_tutrial_2/0_cover.png"&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに　Blenderのチュートリアルについて&lt;/h2&gt;
 &lt;p&gt;今回はYouTubeにてBlenderのチュートリアルとして公開されている動画に沿ってモデリングを行う。
 とても丁寧な動画のためそのまま実行するだけとなりそうだ。
