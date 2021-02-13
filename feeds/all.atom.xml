@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-02-11T23:00:00+09:00</updated><entry><title>3Dプリンター開封【ダヴィンチJr. Pro X+】</title><link href="https://code440.github.io/3d-printer-introduction-davinci-prox.html" rel="alternate"></link><published>2021-02-11T23:00:00+09:00</published><updated>2021-02-11T23:00:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-11:/3d-printer-introduction-davinci-prox.html</id><summary type="html">&lt;p&gt;XYZプリンティングのダヴィンチJr.ProX+の開封からモデルのプリントまでを紹介する。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/3d_printer_introduction_davinci_prox/0_cover.JPG"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/all.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-02-13T22:42:00+09:00</updated><entry><title>Blenderのモデルを3Dプリンター向けに修正する</title><link href="https://code440.github.io/blender-model-to-3dprinter.html" rel="alternate"></link><published>2021-02-13T22:42:00+09:00</published><updated>2021-02-13T22:42:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-13:/blender-model-to-3dprinter.html</id><summary type="html">&lt;p&gt;Blenderの練習として作成した某県のマスコットキャラクターを3Dプリントするために修正する。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_model_to_3dprinter/0_cover.png"&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに　Blenderの修正について&lt;/h2&gt;
+&lt;p&gt;以前、Blenderを使って某県のマスコットキャラクターをモデリングした。
+3Dプリンターではモデルそのままで印刷される。以前のモデルそのままでは厚みが無く、各部位が接続されていない状態となっている。
+今回はそのモデルの部位を接合し、厚みを加える。&lt;/p&gt;
+&lt;p&gt;モデリングの記事は以下。&lt;br&gt;
+&lt;a href="https://code440.github.io/modeling-chiiba-1.html#modeling-chiiba-1"&gt;準備編&lt;/a&gt;。
+&lt;a href="https://code440.github.io/modeling-chiiba-2.html#modeling-chiiba-2"&gt;モデリング編&lt;/a&gt;。&lt;/p&gt;
+&lt;h2&gt;ブーリアンによる接合&lt;/h2&gt;
+&lt;p&gt;今、耳と頭は面が重なっている状態で、頭の中には耳の先端が飛び出している。&lt;br&gt;
+&lt;img alt="fig1_1" src="../images/blender_model_to_3dprinter/1_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;耳を選択している状態で[モディファイアーを追加]から[ブーリアン]を選択する。&lt;br&gt;
+&lt;img alt="fig1_2" src="../images/blender_model_to_3dprinter/1_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;追加されたメニューから[オブジェクト]をクリックし、不要な部分を消す。&lt;br&gt;
+&lt;img alt="fig1_3" src="../images/blender_model_to_3dprinter/1_3.png"&gt;&lt;/p&gt;
+&lt;h2&gt;厚みの追加&lt;/h2&gt;
+&lt;p&gt;現状のオブジェクトはペラペラのため厚みを付ける。
+&lt;img alt="fig2_1" src="../images/blender_model_to_3dprinter/2_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;頭部を選択している状態で[モディファイアーを追加]から[ソリッド化]を選択する。
+&lt;img alt="fig2_2" src="../images/blender_model_to_3dprinter/2_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;とりあえず幅0.02mや0.001mにしてみた。
+&lt;img alt="fig2_3" src="../images/blender_model_to_3dprinter/2_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;すべての部位にソリッドをしてみたところ変なノイズが出ている。
+&lt;img alt="fig2_4" src="../images/blender_model_to_3dprinter/2_4.png"&gt;&lt;/p&gt;
+&lt;h2&gt;STL出力&lt;/h2&gt;
+&lt;p&gt;[ファイル]から[エクスポート]、[STL]を選択。
+&lt;img alt="fig3_1" src="../images/blender_model_to_3dprinter/3_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;blenderの単位は[m]であるが、今回使う3Dプリンターは単位が[mm]なのでスケールを1000にする。&lt;br&gt;
+スケールを調整したら名前を付けエクスポートして完了。
+&lt;img alt="fig3_2" src="../images/blender_model_to_3dprinter/3_2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;読み込みの確認&lt;/h2&gt;
+&lt;p&gt;保存したSTLファイルを3Dプリンターのソフトで読み込む。&lt;br&gt;
+するとモデルが破損しているという警告と自動修復をするか尋ねられた。&lt;br&gt;
+&lt;img alt="fig4_1" src="../images/blender_model_to_3dprinter/4_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;とりあえず、修復してみたところ無事に読み込めたようだ。
+&lt;img alt="Cover" src="../images/blender_model_to_3dprinter/0_cover.png"&gt;&lt;/p&gt;
+&lt;h2&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;blenderで作成したモデルを修正し、無事3Dプリンターのソフトウェアで読み込むことができた。
+次回は3Dプリンターで印刷を試みる。
+なお、今回行った作業では不十分な可能性もあるがその時はこの記事を修正する。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/479806128X/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=479806128X&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=a1205e30dc36a607b626b282e41476a7"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=479806128X&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;img src="//ir-jp.amazon-adsystem.com/e/ir?t=code440-22&amp;l=am2&amp;o=9&amp;a=479806128X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4777518280/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4777518280&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=d59bf8e1e74b6cccafae2d55685efd36"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4777518280&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blender"></category><category term="Blender"></category><category term="modeling"></category><category term="chiiba-ku"></category><category term="3DPrinter"></category></entry><entry><title>3Dプリンター開封【ダヴィンチJr. Pro X+】</title><link href="https://code440.github.io/3d-printer-introduction-davinci-prox.html" rel="alternate"></link><published>2021-02-11T23:00:00+09:00</published><updated>2021-02-11T23:00:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-11:/3d-printer-introduction-davinci-prox.html</id><summary type="html">&lt;p&gt;XYZプリンティングのダヴィンチJr.ProX+の開封からモデルのプリントまでを紹介する。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/0_cover.JPG" width="640"&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;以前、3Dプリンターについて比較を行った。（
 &lt;a href="https://code440.github.io/3d_printer_under100000yen_20201231.html#3d_printer_under100000yen_20201231" onclick="captureOutboundLink('https://code440.github.io/3d_printer_under100000yen_20201231.html#3d_printer_under100000yen_20201231'); return false;"&gt;
@@ -10,11 +51,11 @@
 &lt;h2&gt;開封と設置&lt;/h2&gt;
 &lt;p&gt;箱のサイズは505 x 588 x 475 mmとあるようにやや大きい印象。
 宅配のおじさんもさっさと置かせろという感じだった。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="1_1" src="../images/3d_printer_introduction_davinci_prox/1_1.JPG"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/1_1.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;箱を開けると周辺機器やツールがまとまっている。
-&lt;img alt="1_2" src="../images/3d_printer_introduction_davinci_prox/1_2.JPG"&gt;&lt;/p&gt;
+&lt;img src="../images/3d_printer_introduction_davinci_prox/1_2.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;とりあえずシルバーラックの上に置いてみた。
-&lt;img alt="1_3" src="../images/3d_printer_introduction_davinci_prox/1_3.JPG"&gt;&lt;/p&gt;
+&lt;img src="../images/3d_printer_introduction_davinci_prox/1_3.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;緩衝材など諸々の取り外し作業があるが公式の動画がわかりやすいのでこれに則って行う。&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OoVaDt5hozo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -26,7 +67,7 @@
 &lt;a href="https://www.xyzprinting.com/ja-JP/news/new-nfc-chip"&gt;https://www.xyzprinting.com/ja-JP/news/new-nfc-chip&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;まずは失敗&lt;/h2&gt;
 &lt;p&gt;クイックガイドに則って付属のSDカードに入っているHeart Charmを造形しようとしたところ失敗。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="2_1" src="../images/3d_printer_introduction_davinci_prox/2_1.JPG"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/2_1.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;それもそのはずで、今回取り付けたフィラメントはABSであったが、付属のHeart CharmはPLAを前提に動作情報が設定されている。
 ABSではエクストルーダの温度　210 ℃　印刷プラットフォーム温度　70 ~ 90 ℃が推奨されている。
 しかし、PLAの設定ではエクストルーダの温度 190 ~ 215°C、印刷プラットフォーム温度 45 ℃ と、特にプラットフォームの温度が低いためABSが冷えやすく、反って剥がれてしまう。&lt;/p&gt;
@@ -34,10 +75,10 @@ ABSではエクストルーダの温度　210 ℃　印刷プラットフォー�
 &lt;p&gt;XYZPrintingの公式サイトから関連するソフトウェアがまとめられた「XYZmaker Suite」のインストーラをダウンロードしインストールする。
 さらに、XYZmaker Suiteを起動した後、「XYZprint」をインストールし起動する。
 3Dプリンタを接続し、せっかくなのでアップデートをしてみた。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="3_1" src="../images/3d_printer_introduction_davinci_prox/3_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/3_1.png" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;アップデートが終わったら付属のSDカードの中から"Heart Charm.stl"を取ってきて、"XYZprint"で開く。
-諸々の設定を確認し、"準備"をクリック。
-&lt;img alt="3_2" src="../images/3d_printer_introduction_davinci_prox/3_2.png"&gt;&lt;/p&gt;
+諸々の設定を確認し、"準備"をクリック。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/3_2.png" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;すると推定印刷時間が表示される。
 ３Dプリンタが接続されている状態で"印刷"をクリックすれば印刷が開始される。
 または"保存"から印刷情報が書き込まれた"〇〇.3w"ファイルを保存し、SDカードに移して3Dプリンタに差すことで印刷することができる。
@@ -46,14 +87,16 @@ ABSではエクストルーダの温度　210 ℃　印刷プラットフォー�
 &lt;p&gt;今回はSDカード経由で印刷を行った。&lt;/p&gt;
 &lt;p&gt;推定印刷時間は1h29mであったが実際は2時間程度を要した。
 できたてのHeart Charmがこれである。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Cover" src="../images/3d_printer_introduction_davinci_prox/0_cover.JPG"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/3d_printer_introduction_davinci_prox/0_cover.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;そして剥がした結果...
-&lt;img alt="4_1" src="../images/3d_printer_introduction_davinci_prox/4_1.JPG"&gt;&lt;/p&gt;
+&lt;img src="../images/3d_printer_introduction_davinci_prox/4_1.JPG" width="640"&gt;&lt;/p&gt;
 &lt;p&gt;割れ申した。悲しい。
 剥がすときに気を付けないといけない。&lt;/p&gt;
 &lt;h2&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;無事に3Dプリンタのセッティングと印刷を終えることができた。
-今後はBlenderで作ったモデルやCADで機械設計したものなどの印刷に取り組んでいきたい。&lt;/p&gt;</content><category term="3DPrinting"></category><category term="3DPrinter"></category><category term="XYZPrinting"></category><category term="Da-vinci-jr-Pro-X"></category></entry><entry><title>Blenderで某県のマスコットキャラクターをモデリングする モデリング編</title><link href="https://code440.github.io/modeling-chiiba-2.html" rel="alternate"></link><published>2021-02-01T00:39:00+09:00</published><updated>2021-02-01T00:39:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-01:/modeling-chiiba-2.html</id><summary type="html">&lt;p&gt;Blenderの練習として某県のマスコットキャラクターのモデリングに取り組む。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/modeling_chiiba_2/0_cover.png"&gt;&lt;/p&gt;
+今後はBlenderで作ったモデルやCADで機械設計したものなどの印刷に取り組んでいきたい。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/B07Z4GKKSB/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B07Z4GKKSB&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=7cd94e7cc806c7d6d888f790a9b9171c"&gt;XYZプリンティング 3Dプリンター [ダヴィンチJr. Pro X+] ABS使用可 造形サイズ175×175×175mm オープンフィラメント可 オートキャリブレーション機能付き レーザー刻印機能拡張可 金属系PLA拡張可 3FJSPXJP00G&lt;/a&gt;
+&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07Z4GKKSB/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B07Z4GKKSB&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=8b738b198715ac3c45c6bbf1a451a201"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07Z4GKKSB&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;/p&gt;</content><category term="3DPrinting"></category><category term="3DPrinter"></category><category term="XYZPrinting"></category><category term="Da-vinci-jr-Pro-X"></category></entry><entry><title>Blenderで某県のマスコットキャラクターをモデリングする モデリング編</title><link href="https://code440.github.io/modeling-chiiba-2.html" rel="alternate"></link><published>2021-02-01T00:39:00+09:00</published><updated>2021-02-01T00:39:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-01:/modeling-chiiba-2.html</id><summary type="html">&lt;p&gt;Blenderの練習として某県のマスコットキャラクターのモデリングに取り組む。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/modeling_chiiba_2/0_cover.png"&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに　Blenderによるキャラクターのモデリングについて&lt;/h2&gt;
 &lt;p&gt;Blenderを使ってゆるきゃらなどのマスコットキャラクターをモデリングしたい。
 今回はYouTubeにてBlenderの公式チャンネルにて公開されている動画を参考にモデリングを行う。
