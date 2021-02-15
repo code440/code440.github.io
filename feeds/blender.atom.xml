@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Blender</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/blender.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-02-13T22:42:00+09:00</updated><entry><title>Blenderのモデルを3Dプリンター向けに修正する</title><link href="https://code440.github.io/blender-model-to-3dprinter.html" rel="alternate"></link><published>2021-02-13T22:42:00+09:00</published><updated>2021-02-13T22:42:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-13:/blender-model-to-3dprinter.html</id><summary type="html">&lt;p&gt;Blenderの練習として作成した某県のマスコットキャラクターを3Dプリントするために修正する。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_model_to_3dprinter/0_cover.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Blender</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/blender.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-02-15T23:22:00+09:00</updated><entry><title>Blenderでモデリングしたモデルを3Dプリントした結果</title><link href="https://code440.github.io/printing-chiiba.html" rel="alternate"></link><published>2021-02-15T23:22:00+09:00</published><updated>2021-02-15T23:22:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-15:/printing-chiiba.html</id><summary type="html">&lt;p&gt;Blenderの練習として作成した某県のマスコットキャラクターを3Dプリントしてみた。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/printing_chiiba/0_cover.JPG"&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに　Blenderでモデリングしたモデルの3Dプリントについて&lt;/h2&gt;
+&lt;p&gt;以前、Blenderを使って某県のマスコットキャラクターをモデリングした。&lt;br&gt;
+今回はそのモデルを3Dプリンターで印刷してみる。&lt;/p&gt;
+&lt;p&gt;モデリングの記事は以下。&lt;br&gt;
+&lt;a href="https://code440.github.io/modeling-chiiba-1.html#modeling-chiiba-1"&gt;準備編&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://code440.github.io/modeling-chiiba-2.html#modeling-chiiba-2"&gt;モデリング編&lt;/a&gt;&lt;br&gt;
+&lt;a href="Blenderのモデルを3Dプリンター向けに修正する"&gt;3Dプリンター向け修正編&lt;/a&gt;  &lt;/p&gt;
+&lt;h2&gt;使用する3Dプリンターについて&lt;/h2&gt;
+&lt;p&gt;以前購入したXYZprinter社製のダヴィンチJr.ProX+を使用する。&lt;br&gt;
+&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07Z4GKKSB/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B07Z4GKKSB&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=59ee5c03262a65c9fcf0bf24832178f6"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07Z4GKKSB&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;
+&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/B07Z4GKKSB/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B07Z4GKKSB&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=e98f9f6d0b3d6f7d629bf4a3d753f0e3"&gt;XYZプリンティング 3Dプリンター [ダヴィンチJr. Pro X+] ABS使用可 造形サイズ175×175×175mm オープンフィラメント可 オートキャリブレーション機能付き レーザー刻印機能拡張可 金属系PLA拡張可 3FJSPXJP00G&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;また、モデルのSTLファイルから印刷設定の生成は公式フトウェアのXYZprintを用いる。  &lt;/p&gt;
+&lt;p&gt;開封の様子は以下。
+&lt;a href="https://code440.github.io/3d-printer-introduction-davinci-prox.html#3d-printer-introduction-davinci-prox"&gt;3Dプリンター開封【ダヴィンチJr. Pro X+】&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;印刷設定&lt;/h2&gt;
+&lt;p&gt;今回3Dプリントするモデルは頭でっかちなためサポートを設定する。&lt;br&gt;
+&lt;img alt="fig1_1" src="../images/printing_chiiba/1_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;その他の設定はとりあえずデフォルトで[準備]をクリックすると推定印刷時間は約8時間と出た。
+また、サポート材は青で表示してくれている。
+&lt;img alt="fig1_2" src="../images/printing_chiiba/1_2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;3Dプリント&lt;/h2&gt;
+&lt;p&gt;SDにカード経由で印刷を開始し1時間30分経過後、ソフト上の様子。&lt;br&gt;
+&lt;img alt="fig2_1" src="../images/printing_chiiba/2_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;3時間経過後、実際の様子。&lt;br&gt;
+&lt;img src="../images/printing_chiiba/2_2.JPG" width="640"&gt;&lt;/p&gt;
+&lt;p&gt;9時間経過後、ソフト上の様子と実際の様子。中にもサポートがある&lt;br&gt;
+&lt;img alt="fig2_3" src="../images/printing_chiiba/2_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/printing_chiiba/2_4.JPG" width="640"&gt;&lt;/p&gt;
+&lt;p&gt;そして約14時間後に完成。&lt;br&gt;
+&lt;img src="../images/printing_chiiba/2_5.JPG" width="640"&gt;
+&lt;img src="../images/printing_chiiba/2_6.JPG" width="640"&gt;&lt;/p&gt;
+&lt;h2&gt;取り外し&lt;/h2&gt;
+&lt;p&gt;さっそく取り外す。&lt;br&gt;
+足元はすぐに取れた。（気にならなかったけど写真で見ると足の底剥がれてね？）
+&lt;img src="../images/printing_chiiba/3_1.JPG" width="640"&gt;&lt;/p&gt;
+&lt;p&gt;後側はこんな感じ。
+&lt;img src="../images/printing_chiiba/3_2.JPG" width="640"&gt;&lt;/p&gt;
+&lt;p&gt;そして、脚部のサポートを剥がすときに、、、何ぃー！！折れたー！
+&lt;img src="../images/printing_chiiba/3_3.JPG" width="640"&gt;&lt;/p&gt;
+&lt;p&gt;何事もなかったかのように置いてみた。後で接着しよう。
+&lt;img src="../images/printing_chiiba/0_cover.JPG" width="640"&gt;&lt;/p&gt;
+&lt;h2&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;色々あったが形にはなった。
+脚が折れた他にもところどころヒビ割れており、モデルの厚み調整やABSの印刷設定の調整が重要であると感じた。&lt;br&gt;
+今度やるときはそういったところに気をつけたい。&lt;br&gt;
+次はCADで設計した部品の印刷に取り組んでいきたい。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/479806128X/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=479806128X&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=a1205e30dc36a607b626b282e41476a7"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=479806128X&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;img src="//ir-jp.amazon-adsystem.com/e/ir?t=code440-22&amp;l=am2&amp;o=9&amp;a=479806128X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;
+&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4777518280/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4777518280&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=d59bf8e1e74b6cccafae2d55685efd36"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4777518280&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blender"></category><category term="Blender"></category><category term="modeling"></category><category term="chiiba-kun"></category><category term="3DPrinter"></category><category term="XYZPrinting"></category><category term="Da-vinci-Jr-Pro-X+"></category></entry><entry><title>Blenderのモデルを3Dプリンター向けに修正する</title><link href="https://code440.github.io/blender-model-to-3dprinter.html" rel="alternate"></link><published>2021-02-13T22:42:00+09:00</published><updated>2021-02-13T22:42:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-02-13:/blender-model-to-3dprinter.html</id><summary type="html">&lt;p&gt;Blenderの練習として作成した某県のマスコットキャラクターを3Dプリントするために修正する。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Cover" src="../images/blender_model_to_3dprinter/0_cover.png"&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに　Blenderの修正について&lt;/h2&gt;
 &lt;p&gt;以前、Blenderを使って某県のマスコットキャラクターをモデリングした。
 3Dプリンターではモデルそのままで印刷される。以前のモデルそのままでは厚みが無く、各部位が接続されていない状態となっている。
