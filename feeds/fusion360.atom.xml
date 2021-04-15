@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Fusion360</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/fusion360.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-04-15T23:50:00+09:00</updated><entry><title>Autodesk Fusion 360に入門する</title><link href="https://code440.github.io/fusion360_introduction.html" rel="alternate"></link><published>2021-04-15T23:50:00+09:00</published><updated>2021-04-15T23:50:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-04-15:/fusion360_introduction.html</id><summary type="html">&lt;p&gt;機械設計するツールとしてAutodeskのFusion360の基本操作についてまとめる。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/fusion360_introduction/0_cover.png" width="640"　alt='cover_image'&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;本記事ではAutodeskのCAD製品であるFusion 360の基本操作について、
+キー溝付きのフランジを例にまとめる。&lt;/p&gt;
+&lt;p&gt;作例となるキー溝付きのフランジについては以下の本の寸法を用いる。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4061565664/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4061565664&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=1344b83d25ef8eb08095518674677420"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4061565664&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/4061565664/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4061565664&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=71360ace3509a592c528e164ef1eeb48"&gt;これだけは知っておきたい!機械設計製図の基本 (KS理工学専門書)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;スケッチと押し出し&lt;/h2&gt;
+&lt;p&gt;作成の流れはスケッチで形状を書き、押出しで立体にする。
+外形ができたら穴とキー溝を作っていく。&lt;/p&gt;
+&lt;p&gt;基本画面は以下の図のようになる。
+上部に各ツールや機能がアイコンで用意されている。これらの多くはショートカットが用意されているので慣れてきたら覚えると良い。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_1.png" width="640"　alt='ワークスペースの図'&gt;&lt;/p&gt;
+&lt;p&gt;まず、形状を描くために[スケッチを作成]を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_2.png" width="640" alt='スケッチを作成の図'&gt;&lt;/p&gt;
+&lt;p&gt;[スケッチを作成]を選択するとどの平面にスケッチをするか選択を求められる。
+ここではxy平面を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_3.png" width="640" alt='スケッチ平面を選択の図'&gt;&lt;/p&gt;
+&lt;p&gt;右上が視点を表しており、ｘｙ平面は上面図となる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_4.png" width="640" alt='スケッチ平面を選択した後の図'&gt;&lt;/p&gt;
+&lt;p&gt;最初に外側の円を描くため、[中心と直径で指定した円]を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_5.png" width="640" alt='中心と直径で指定した円を選択の図'&gt;&lt;/p&gt;
+&lt;p&gt;[中心と直径で指定した円]を選択したら、今回は画面の中心点からドラッグする。
+ここでは直径５０mmの円とするため、ドラッグしながら近い値になるようにするか寸法を５０と入力して確定する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_6.png" width="640" alt='円の寸法を入力する図'&gt;&lt;/p&gt;
+&lt;p&gt;寸法が確定すると以下のような画面となる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_7.png" width="640" alt='中心と直径で指定した円の図'&gt;&lt;/p&gt;
+&lt;p&gt;次に、円を立体とするために[押し出し]を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_8.png" width="640" alt='押し出しを選択する図'&gt;&lt;/p&gt;
+&lt;p&gt;さきほどの円を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_9.png" width="640" alt='押し出しプロファイルとして円を選択する図'&gt;&lt;/p&gt;
+&lt;p&gt;ここでは押し出す高さを１０mmとする。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_10.png" width="640" alt='押出1'&gt;&lt;/p&gt;
+&lt;p&gt;押し出しの寸法を確定するすると以下のような画面となる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_11.png" width="640" alt='押出2'&gt;&lt;/p&gt;
+&lt;p&gt;同様の手順で、先ほどの円の上面にスケッチをして円を書き押し出すて、二段の円とする。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_1_12.png" width="640" alt='同様の操作でもう一弾円を押し出した図'&gt;&lt;/p&gt;
+&lt;h2&gt;穴あけ&lt;/h2&gt;
+&lt;p&gt;次に穴をあけるため、ここでは[スケッチを作成]から[点]を選択し、円の中心をクリックする。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_1.png" width="640" alt='穴なけ操作１'&gt;&lt;/p&gt;
+&lt;p&gt;点を書くと以下のようになる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_2.png" width="640" alt='穴なけ操作2'&gt;&lt;/p&gt;
+&lt;p&gt;次に[穴]を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_3.png" width="640" alt='穴なけ操作3'&gt;&lt;/p&gt;
+&lt;p&gt;以下のようなウィンドウがポップアップする。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_4.png" width="640" alt='穴なけ操作4'&gt;&lt;/p&gt;
+&lt;p&gt;ポップアップしたウィンドウから[選択]で、さきほどスケッチした穴を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_5.png" width="640" alt='穴なけ操作5'&gt;&lt;/p&gt;
+&lt;p&gt;[範囲]は[すべて]を選択し、貫通させる。
+下部の穴の直径を１２mmとし、[OK]を押す。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_6.png" width="640" alt='穴なけ操作6'&gt;&lt;/p&gt;
+&lt;p&gt;以上で穴が空いた状態となる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_2_7.png" width="640" alt='穴なけ操作7'&gt;&lt;/p&gt;
+&lt;h2&gt;キー溝&lt;/h2&gt;
+&lt;p&gt;次にキー溝を作る。
+ここではスケッチで矩形を書き、押し出して切り抜く。&lt;/p&gt;
+&lt;p&gt;まずスケッチから矩形を選択する。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_3_1.png" width="640" alt='キー溝１'&gt;&lt;/p&gt;
+&lt;p&gt;矩形は円の中心を端辺として幅を6mm、長さを8mmとする。
+場合によっては中心点からの寸法を指定して中心を合わせる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_3_2.png" width="640" alt='キー溝2'&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_3_3.png" width="640" alt='キー溝3'&gt;&lt;/p&gt;
+&lt;p&gt;次に[押し出し]から先ほどのスケッチを選択し、範囲はすべてとするが、押し出し時の方向を[反転]を選択する。
+そして、[操作]を切り取りとすることで、キー溝となる。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/Fusion360_3_4.png" width="640" alt='キー溝4'&gt;&lt;/p&gt;
+&lt;p&gt;以上で完成。&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/fusion360_introduction/0_cover.png" width="640"　alt='comp_image'&gt;&lt;/p&gt;
+&lt;h2&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;今回は基本操作であるスケッチ、押し出し、穴あけ、溝づくりを行った。
+これらを組み合わせることで基本的な部品は設計できると思う。&lt;/p&gt;
+&lt;p&gt;今後、機会があれば他の機能についても試していきたい。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4877834923/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4877834923&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=650b8272161a453d947a55709d0b65db"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4877834923&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/4877834923/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4877834923&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=39ca339d7223d7c32da25d5b05234afc"&gt;Fusion360操作ガイド ベーシック編 2021年版―次世代クラウドベース3DCAD&lt;/a&gt;&lt;/p&gt;</content><category term="Fusion360"></category><category term="CAD"></category><category term="Fusion360"></category><category term="Autodesk"></category></entry></feed>
