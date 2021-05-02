@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://code440.github.io/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://code440.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://code440.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tech Note 440s Atom">
+
+
+    <link rel="shortcut icon" href="/images/code-440.png" type="image/x-icon">
+    <link rel="icon" href="/images/code-440.png" type="image/x-icon">
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K6T1R2Z1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5K6T1R2Z1P');
+</script>
+<!-- End of Global site tag (gtag.js) - Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#440">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#440">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#440">
+
+<meta name="author" content="code-440" />
+<meta name="description" content="AutodeskのFusion360で歯車を設計する手法について紹介する記事についてまとめた。" />
+<meta name="keywords" content="CAD, Fusion360, Autodesk">
+
+
+<meta property="og:site_name" content="Tech Note 440s"/>
+<meta property="og:title" content="Fusion 360での歯車あれこれまとめ"/>
+<meta property="og:description" content="AutodeskのFusion360で歯車を設計する手法について紹介する記事についてまとめた。"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://code440.github.io/fusion360_gear_survey.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-05-02 19:30:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://code440.github.io/author/code-440.html">
+<meta property="article:section" content="survey"/>
+<meta property="article:tag" content="CAD"/>
+<meta property="article:tag" content="Fusion360"/>
+<meta property="article:tag" content="Autodesk"/>
+<meta property="og:image" content="/images/code-440.png">
+
+  <title>Tech Note 440s &ndash; Fusion 360での歯車あれこれまとめ</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-3079184443691298",
+      enable_page_level_ads: true
+    });
+  </script>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N5F7W7G');
+</script>
+<!-- End Google Tag Manager --></head>
+<body class="light-theme">
+<!-- Google Tag Manager -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5F7W7G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->  <aside>
+    <div>
+      <a href="https://code440.github.io">
+        <img src="/images/code-440.png" alt="code-440" title="code-440">
+      </a>
+
+      <h1>
+        <a href="https://code440.github.io">code-440</a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://code440.github.io/pages/about_site.html#about_site">
+                  このサイトについて
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://code440.github.io/pages/privacy_policy.html#privacy_policy">
+                  プライバシーポリシー
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="" ></a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-You can add links in your config file" href="#" target="_blank">
+              <i class="fab fa-You can add links in your config file"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-Another social link" href="#" target="_blank">
+              <i class="fab fa-Another social link"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle ads-aside"
+           data-ad-client="ca-pub-3079184443691298"
+           data-ad-slot="6118075817"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://code440.github.io">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://code440.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="fusion360_gear_survey">Fusion 360での歯車あれこれまとめ</h1>
+    <p>
+      Posted on Sun 02 May 2021 in <a href="https://code440.github.io/category/survey.html">survey</a>
+
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-3079184443691298"
+         data-ad-slot="6118075817"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <h2>はじめに</h2>
+<p>昨今、３Dプリンターの普及で歯車を手軽に作って試すことができるようになった。
+そこで、機械設計CADであるFusion360を用いて歯車を設計する方法について紹介する記事をピックアップしてまとめた。<br>
+Fusion360の標準の機能には歯車を設計するツールは無いが、代わりに「App」という名称で各種設計をサポートするアドインが提供されている。<br>
+ここではその中から、平歯車を設計するアドイン「Spur Gear」、平歯車の他に内歯車、ラックギアなどを設計できる「FM Gears」、かさ歯車を設計できる「Bevel Gear Design」に関する記事を表にまとめた。
+今回ピックアップする記事には無いがはすば歯車を設計するプラグイン「<a href="https://apps.autodesk.com/FUSION/ja/Detail/Index?id=9029586664984391977&amp;appLang=en&amp;os=Win64&amp;_ga=2.74051350.562528945.1619940689-24342859.1619940689">Helical Gear Generator</a>」もあるようだ。</p>
+<table>
+<thead>
+<tr>
+<th align="right">No.</th>
+<th align="left">title</th>
+<th align="right">date</th>
+<th align="left">site</th>
+<th align="left">detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left"><a href="https://www.fact-cam.co.jp/product/2019/10/fusion360/archives/000447.html">Fusion360で歯車を簡単に作る方法｜噛み合わせて回転させるには？</a></td>
+<td align="right">2020-12-01</td>
+<td align="left">fact</td>
+<td align="left">「Spur Gear」アドインによる平歯車の設計、モーションリンクによるシミュレーション</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left"><a href="https://rt-net.jp/mobility/archives/13983/">Fusion360でマウスのギアをつくる：マウス研修（しおたに）36</a></td>
+<td align="right">2020-09-24</td>
+<td align="left">RT Mobility Robot Blog</td>
+<td align="left">「Spur Gear」アドインによる平歯車の設計、KHKの歯車計算ソフト GCSWの活用</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left"><a href="https://sensy-lab.hatenablog.com/entry/2020/01/29/152839">【Fusion 360】歯車を超簡単に作成する方法</a></td>
+<td align="right">2020-01-29</td>
+<td align="left">Sensy_Labのブログ</td>
+<td align="left">「Spur Gear」アドインによる平歯車の設計、モーションリンクによるシミュレーション</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left"><a href="https://fabble.cc/robotakun/fusion360xxxxxxx">Fusion360による歯車設計</a></td>
+<td align="right">2016-05-26</td>
+<td align="left">fabble</td>
+<td align="left">「Spur Gear」アドインによる平歯車の設計、モーションリンクによるシミュレーション</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left"><a href="http://jetnasa.jp/2021/01/10/fusion-360で歯車を設計して３dプリントしてみた/">Fusion 360で歯車を設計して３Dプリントしてみた</a></td>
+<td align="right">2021-01-10</td>
+<td align="left">JET工房　DIYな日々</td>
+<td align="left">「Spur Gear」アドインによる設計、３Dプリンタによる出力。</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left"><a href="http://fusion360.blog.jp/blog/20151217/1047751873">歯車のアセンブリ</a></td>
+<td align="right">2015-12-17</td>
+<td align="left">Fusion360 日本語解説</td>
+<td align="left">モーションリンクによる平歯車のシミュレーション</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left"><a href="https://monohoshi.blog/gear/">初心者の3Dプリンター生活 Fusion 360とsnapmakerでギアを作ろう</a></td>
+<td align="right">2021-03-20</td>
+<td align="left">takeotaの物欲し雑記帳</td>
+<td align="left">「FM Gears」アドインによる平歯車、内歯車の設計。</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left"><a href="https://tas400kt.xyz/archives/974">3D-CAD遊び 遊星歯車減速機</a></td>
+<td align="right">2020-12-22</td>
+<td align="left">メカ好きオッサンのblog</td>
+<td align="left">「FM Gears」アドインによる平歯車、内歯車の設計。</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left"><a href="https://sesiro-kosaku.com/2020/03/30/ギヤを作ってみよう/">ギヤを作ってみよう</a></td>
+<td align="right">2020-03-30</td>
+<td align="left">せしろの工作</td>
+<td align="left">「FM Gears」アドインによる平歯車の設計</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left"><a href="https://ratelog.net/fusion360-fmgears/">【Fusion360】平歯車はもちろん内歯車やラックも作れるFM Gearsアドイン！</a></td>
+<td align="right">2019-09-28</td>
+<td align="left">らてろぐ</td>
+<td align="left">「FM Gears」アドインによる平歯車、内歯車、ラックの設計</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left"><a href="https://plaza.rakuten.co.jp/sejii/diary/201611170000/">無料CAD　FUSION360　への傘歯車（Bevel）　平歯車のアドイン方法</a></td>
+<td align="right">2016-11-17</td>
+<td align="left">MS工房　秋葉（新津）のブログ</td>
+<td align="left">「Bevel Gear Design」アドインによるかさ歯車の設計、「Spur Gear」アドインによる設計</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left"><a href="https://www.acuo.jp/fusion360/fusion360-api-python.html">Fusion360 転位歯車の描画API</a></td>
+<td align="right">2020-09-23</td>
+<td align="left">ACUO DESIGN</td>
+<td align="left">独自スクリプトによる設計。</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left"><a href="https://www.usagi1975.com/201811250122/">Fusion360でディファレンシャルギア作成</a></td>
+<td align="right">2018-11-29</td>
+<td align="left">Scratchpad@usagi1975.com</td>
+<td align="left">独自にかさ歯車を設計。</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left"><a href="https://blog.rogiken.org/blog/2021/04/01/fusion-360-でつくる-はすばやまば-歯車/">Fusion 360 でつくる はすば/やまば 歯車</a></td>
+<td align="right">2021-04-01</td>
+<td align="left">東京工業大学 ロボット技術研究会公式ブログ</td>
+<td align="left">アドインを使わずにはすば歯車を設計</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://code440.github.io/tag/cad.html">CAD</a>
+      <a href="https://code440.github.io/tag/fusion360.html">Fusion360</a>
+      <a href="https://code440.github.io/tag/autodesk.html">Autodesk</a>
+    </p>
+  </div>
+
+
+  <div class="neighbors">
+    <a class="btn float-left" href="https://code440.github.io/fusion360_introduction.html" title="Autodesk Fusion 360に入門する">
+      <i class="fa fa-angle-left"></i> Previous Post
+    </a>
+  </div>
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="https://code440.github.io/fusion360_introduction.html">Autodesk Fusion 360に入門する</a></li>
+    </ul>
+  </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-3079184443691298"
+         data-ad-slot="6118075817"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</article>
+
+    <footer>
+<p>&copy; 2021 code-440</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Tech Note 440s ",
+  "url" : "https://code440.github.io",
+  "image": "/images/code-440.png",
+  "description": "pelican, python"
+}
+</script>
+
+
+</body>
+</html>
