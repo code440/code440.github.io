@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Raspberry Pi</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/raspberry-pi.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-05-07T15:50:00+09:00</updated><entry><title>タンスから出てきたRaspberry Pi2 B にUbuntu MATE16.04をインストールする方法</title><link href="https://code440.github.io/raspberrypib2_mate_install.html" rel="alternate"></link><published>2021-05-07T15:50:00+09:00</published><updated>2021-05-07T15:50:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-05-07:/raspberrypib2_mate_install.html</id><summary type="html">&lt;p&gt;タンスから出てきたRaspberry Pi2 Bを活用するためUbuntu MATE16.04をインストールするため、OSイメージの取得方法についてまとめた。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/raspberrypi2b_ubuntumate/0_cover.png" width="640"　alt='cover_image'&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tech Note 440s - Raspberry Pi</title><link href="https://code440.github.io/" rel="alternate"></link><link href="https://code440.github.io/feeds/raspberry-pi.atom.xml" rel="self"></link><id>https://code440.github.io/</id><updated>2021-05-08T17:15:00+09:00</updated><entry><title>タンスから出てきたRaspberry Pi2 BでPWMサーボモーターを動かす</title><link href="https://code440.github.io/raspberrypib2_adafruit_hat.html" rel="alternate"></link><published>2021-05-08T17:15:00+09:00</published><updated>2021-05-08T17:15:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-05-08:/raspberrypib2_adafruit_hat.html</id><summary type="html">&lt;p&gt;タンスから出てきたRaspberry Pi2 BにAdafruitのhat方法についてまとめた。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/raspberrypib2_adafruithat/0_cover.jpg" width="640"　alt='cover_image'&gt;&lt;/p&gt;
+&lt;h2&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;故あってPWMサーボを制御しようと思い、手軽にできそうなものを探したところAdafruitの製品である「Adafruit 16-Channel PWM/Servo HAT &amp;amp; Bonnet for Raspberry Pi」（以下：PWM/Servo HAT）に行き着いた。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/B00SI1SPHS/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B00SI1SPHS&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=9ceb2865f1df4fb83c12d3ac86d0842c"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B00SI1SPHS&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;br&gt;
+&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/B00SI1SPHS/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B00SI1SPHS&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=e24840578640e8ab848a6a5c5d2d2841"&gt;Adafruit 16チャンネル PWM/サーボ HAT for Raspberry Pi&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;この商品は「Raspberry Pi(RasPi)」のピン配列に則って作られており、RasPiに差しこむだけで使用できる。&lt;br&gt;
+そういえばRasPiを持っていたなと思い購入した次第である。&lt;br&gt;
+さて、肝心のRasPiはどこかと片付けしながら探したところ、無事（？）タンスから「Raspberry Pi2 Model B」が出てきた。&lt;/p&gt;
+&lt;p&gt;OSのセットアップについては&lt;a href="https://code440.github.io/raspberrypib2_mate_install.html"&gt;前記事&lt;/a&gt;を参照のこと。&lt;/p&gt;
+&lt;h2&gt;Raspberry Piの設定変更&lt;/h2&gt;
+&lt;p&gt;PWM/Servo HATはRasPiのIC2機能を使って最大16本のPWMを制御することができる。&lt;br&gt;
+一方で、RasPiの初期設定ではIC2を含めSPIやカメラモジュールなどの機能も切られているため、設定を変更する必要がある。
+&lt;a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c"&gt;Adafruit公式のガイド&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Adafruit公式ガイドの記述に対して、私の場合はOSとしてUbuntu　MATE16.04を使用しているため、[python-smbus]、[i2c-tools]は入っていた。&lt;br&gt;
+一方で、[raspi-config]はインストールされていなかったので、インストールした上で実行し設定を変更した。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install raspi-config
+sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;[Interfacing Options]から変更できる。
+&lt;img src="../images/raspberrypib2_adafruithat/raspberrypib2_adafruithat.png" width="640"　alt='raspi-config'&gt;&lt;/p&gt;
+&lt;h2&gt;PWM/Servo HATの接続&lt;/h2&gt;
+&lt;p&gt;PWM/Servo HATではPWMサーボ用の電源はRasPiと分けることを推奨している。
+ここでは以下の写真のようにmicro-USB基板を用意し、配線を伸ばして接続した。
+&lt;img src="../images/raspberrypib2_adafruithat/0_cover.jpg" width="640"　alt='PWM/ServoHATの接続'&gt;&lt;/p&gt;
+&lt;p&gt;なお、USB基板は昔秋月電子で買ったものを使用した。
+アマゾンだとこの当たりが近いか。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/B01J7GEA30/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B01J7GEA30&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=f3012239bf751c32116f8e9378691ad6"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B01J7GEA30&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;br&gt;
+&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/B01J7GEA30/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B01J7GEA30&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=2eeb980db7f70ae764f4143c22fbad45"&gt;USBマイクロBコネクタ・ピッチ変換基板&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;改めて買うのであればType-Cが良いかもしれない。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/B091XMX9NP/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B091XMX9NP&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=e5246fca480c21edc9f4acb8f6372f42"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B091XMX9NP&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;br&gt;
+&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/B091XMX9NP/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=B091XMX9NP&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=f06f58e450c20e77f0223a4e8d7b01c7"&gt;CK-45 USB Type-C コネクタ変換基板 サンハヤト&lt;/a&gt;  &lt;/p&gt;
+&lt;h2&gt;PWMサーボモーターの制御&lt;/h2&gt;
+&lt;p&gt;RasPiでPWM/Servo HATの利用にはAdafruitのPythonライブラリを利用する。この時、Adafruit公式では2つの方法が紹介されている。
+一つは&lt;a href="https://github.com/adafruit/Adafruit_CircuitPython_ServoKit"&gt;AdafruitのGithub&lt;/a&gt;。
+もう一つ、Adafruitの&lt;a href="https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/using-the-python-library"&gt;Python Usage&lt;/a&gt;では以下のようにライブラリをインストールする。  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo pip3 install adafruit-circuitpython-servokit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;この時、以下のようなエラーが出てしまう場合はaptでインストールされているpip3が古いため[setuptool]のupdateを行う。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
+  File &lt;span class="s2"&gt;&amp;quot;/usr/bin/pip3&amp;quot;&lt;/span&gt;, line &lt;span class="m"&gt;11&lt;/span&gt;, in &amp;lt;module&amp;gt;
+    sys.exit&lt;span class="o"&gt;(&lt;/span&gt;main&lt;span class="o"&gt;())&lt;/span&gt;
+  File &lt;span class="s2"&gt;&amp;quot;/home/mate/.local/lib/python3.5/site-packages/pip/__init__.py&amp;quot;&lt;/span&gt;, line &lt;span class="m"&gt;12&lt;/span&gt;, in main
+    from pip._internal.utils.entrypoints import _wrapper
+  File &lt;span class="s2"&gt;&amp;quot;/home/mate/.local/lib/python3.5/site-packages/pip/_internal/utils/entrypoints.py&amp;quot;&lt;/span&gt;, line &lt;span class="m"&gt;4&lt;/span&gt;, in &amp;lt;module&amp;gt;
+    from pip._internal.cli.main import main
+  File &lt;span class="s2"&gt;&amp;quot;/home/mate/.local/lib/python3.5/site-packages/pip/_internal/cli/main.py&amp;quot;&lt;/span&gt;, line &lt;span class="m"&gt;58&lt;/span&gt;
+    sys.stderr.write&lt;span class="o"&gt;(&lt;/span&gt;f&lt;span class="s2"&gt;&amp;quot;ERROR: {exc}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+                                   ^
+SyntaxError: invalid syntax
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo pip3 install --upgrade setuptools&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;※　コマンドをメモしていなかったので間違っているかもしれない。&lt;/p&gt;
+&lt;p&gt;ライブラリがインストールできたのならば、後はPythonで制御できる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;adafruit_servokit&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ServoKit&lt;/span&gt;
+&lt;span class="n"&gt;kit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ServoKit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;kit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;servo&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;angle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;180&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;以下、動作の様子。&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;準備中&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;今回はサンプルの設定をそのままで動かしたが、PWMサーボモーターはメーカー毎にPWMの範囲が異なっていることが多い。
+Adafruitの&lt;a href="https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/library-reference"&gt;Library Reference&lt;/a&gt;によると以下のような形で範囲を調整できるようだ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pwm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PWM&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mh"&gt;0x40&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pwm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setPWM&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1024&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3072&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;以上で本記事は終わるが、次はROSを絡めて使ってみたい。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4873119413/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873119413&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=5d9ecb03e1d688dd933358254869e90b"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4873119413&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;br&gt;
+&lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/4873119413/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873119413&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=94aabe72e4d2ca612aee4b703701449a"&gt;Raspberry Piクックブック 第3版 (Make:PROJECTS)&lt;/a&gt;&lt;/p&gt;</content><category term="Raspberry Pi"></category><category term="Raspberry Pi"></category><category term="Adafruit"></category><category term="pwm servomotor"></category></entry><entry><title>タンスから出てきたRaspberry Pi2 B にUbuntu MATE16.04をインストールする方法</title><link href="https://code440.github.io/raspberrypib2_mate_install.html" rel="alternate"></link><published>2021-05-07T15:50:00+09:00</published><updated>2021-05-07T15:50:00+09:00</updated><author><name>code-440</name></author><id>tag:code440.github.io,2021-05-07:/raspberrypib2_mate_install.html</id><summary type="html">&lt;p&gt;タンスから出てきたRaspberry Pi2 Bを活用するためUbuntu MATE16.04をインストールするため、OSイメージの取得方法についてまとめた。&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/raspberrypi2b_ubuntumate/0_cover.png" width="640"　alt='cover_image'&gt;&lt;/p&gt;
 &lt;h2&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;お片付けをしていたらタンスから「Raspberry Pi2 Model B」が出てきた。
 これは2015年に発売したモデルで900MHzのARM Cortex-A7クアッドコアでメモリ1GBのものである。
@@ -42,6 +116,6 @@
 ちなみに、NVIDIAなどでは&lt;a href="https://www.balena.io/etcher/"&gt;balenaのetcher&lt;/a&gt;が推奨されている。&lt;/p&gt;
 &lt;h2&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;実は最初20.04を入れようちとしたが起動にかなりの時間を要した上に起動後の言語選択画面の段階でマウスやキーボードを受け付けなかったので諦めた。&lt;/p&gt;
-&lt;p&gt;それはそうと次回はAdafruitのHATを用いてラジコンサーボを動かしたい。&lt;/p&gt;
-&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4873119413/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873119413&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=5d9ecb03e1d688dd933358254869e90b"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4873119413&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;
+&lt;p&gt;それはそうと次回はAdafruitのHATを用いてラジコンサーボを動かした記事を書きたい。&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank"  href="https://www.amazon.co.jp/gp/product/4873119413/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873119413&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=5d9ecb03e1d688dd933358254869e90b"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4873119413&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=code440-22" &gt;&lt;/a&gt;&lt;br&gt;
 &lt;a target="_blank" href="https://www.amazon.co.jp/gp/product/4873119413/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873119413&amp;linkCode=as2&amp;tag=code440-22&amp;linkId=94aabe72e4d2ca612aee4b703701449a"&gt;Raspberry Piクックブック 第3版 (Make:PROJECTS)&lt;/a&gt;&lt;/p&gt;</content><category term="Raspberry Pi"></category><category term="Raspberry Pi"></category><category term="Ubuntu MATE"></category></entry></feed>
